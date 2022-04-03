@@ -1,0 +1,16 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <h3>Slider detail</h3>
+    <img src="~/assets/img/@Model.Image" alt="Alternate Text" style="width:350px;height:350px" />
+    <h6 class="text-success">Header:  @Model.Header</h6>
+    <h6 class="text-success">Offer:  @Model.Offer</h6>
+    <h6 class="text-success">Up Title:  @Model.Offer</h6>
+    <h6 class="text-success">Down Title:  @Model.DownTitle</h6>
+    <h6 class="text-success">Description:  @Model.Description</h6>
+    <h6 class="text-success">Price: @Model.Price</h6>
+    <a asp-action="Index" class="btn btn-primary mt-3">Go back</a>
+</div>

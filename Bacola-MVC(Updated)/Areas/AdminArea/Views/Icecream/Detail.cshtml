@@ -1,0 +1,13 @@
+﻿@model Icecream
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <h3>Slider detail</h3>
+    <img src="~/assets/img/@Model.Image" alt="Alternate Text" style="width:350px;height:350px" />
+    <h6 class="text-success">Header:  @Model.DiscountTitle</h6>
+    <h6 class="text-success">Title:  @Model.MainTitle</h6>
+    <h6 class="text-success">Description:  @Model.Description</h6>
+    <a asp-action="Index" class="btn btn-primary mt-3">Go back</a>
+</div>

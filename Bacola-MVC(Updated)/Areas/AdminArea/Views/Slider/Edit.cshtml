@@ -1,0 +1,49 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Update Category";
+}
+
+<div class="container">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    <img style="width:150px;height:150px" src="~/img/@Model.Image" alt="Alternate Text" />
+                </div>
+
+                <form class="forms-sample mt-5" method="post" asp-action="Edit" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="Photo"></label>
+                        <input class="form-control" asp-for="Photo">
+                        <span class="text-danger" asp-validation-for="Photo"></span>
+                        <label asp-for="Header"></label>
+                        <input class="form-control" asp-for="Header">
+                        <span class="text-danger" asp-validation-for="Header"></span>
+                        <label asp-for="Offer"></label>
+                        <input class="form-control" asp-for="Offer">
+                        <span class="text-danger" asp-validation-for="Offer"></span>
+                        <label asp-for="UpTitle"></label>
+                        <input class="form-control" asp-for="UpTitle">
+                        <span class="text-danger" asp-validation-for="UpTitle"></span>
+                        <label asp-for="DownTitle"></label>
+                        <input class="form-control" asp-for="DownTitle">
+                        <span class="text-danger" asp-validation-for="DownTitle"></span>
+                        <label asp-for="Description"></label>
+                        <input class="form-control" asp-for="Description">
+                        <span class="text-danger" asp-validation-for="Description"></span>
+                        <label asp-for="Price"></label>
+                        <input class="form-control" asp-for="Price">
+                        <span class="text-danger" asp-validation-for="Price"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-light">
+                        <a asp-action="Index">Cancel</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

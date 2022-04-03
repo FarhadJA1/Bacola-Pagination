@@ -1,0 +1,43 @@
+﻿@model Icecream
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="container">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    <img style="width:150px;height:150px" src="~/assets/img/@Model.Image" alt="Alternate Text" />
+                </div>
+                <form class="forms-sample" method="post" asp-action="Edit" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="DiscountTitle"></label>
+                        <input type="text" class="form-control" asp-for="DiscountTitle">
+                        <span class="text-danger" asp-validation-for="DiscountTitle"></span>
+                        <label asp-for="MainTitle"></label>
+                        <input type="text" class="form-control" asp-for="MainTitle">
+                        <span class="text-danger" asp-validation-for="MainTitle"></span>
+                        <label asp-for="Description"></label>
+                        <input type="text" class="form-control" asp-for="Description">
+                        <span class="text-danger" asp-validation-for="Description"></span>
+                        <label asp-for="Photo"></label>
+                        <input class="form-control" asp-for="Photo">
+                        <span class="text-danger" asp-validation-for="Photo"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-light">
+                        <a asp-action="Index">Cancel</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h1>Create</h1>
+
+
+
